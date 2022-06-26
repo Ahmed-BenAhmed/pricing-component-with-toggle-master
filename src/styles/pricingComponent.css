@@ -81,11 +81,12 @@ header h2 {
     color: var(--dark-bleu);
     opacity: 0.8
 }
-
+/* Main */
 main {
     margin-top: 60px;
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
 }
 .active {
     transform: scale(1.05);
@@ -95,6 +96,8 @@ main {
 .plan {
     background-color: #fff;
     padding: 60px 40px;
+    min-width: 320px;
+    margin: 10px auto;
     border-radius: 10px;
 }
 .type {
@@ -135,8 +138,11 @@ main {
     height: 1px;
     background: linear-gradient(90deg,var(--gr-color1),var(--gr-color1));
 }
+
+/* button */
 .btn {
     margin-top: 15px;
+    width: 100%;
     padding: 7px 45px;
     font-size: 12px;
     color: #fff;
@@ -162,3 +168,14 @@ main {
 }
 
 
+/*  Mobile desing */
+
+@media screen and (max-width: 680px) {
+    .bg-top {
+        width: 250px;
+        position: fixed;
+    }
+    .bg-bottom {
+        position: fixed;
+    }
+}
