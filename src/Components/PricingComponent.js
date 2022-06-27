@@ -41,11 +41,11 @@ function PricingComponent() {
             <div className="choice"> Annually <Toggle value={annually} setValue={setAnnually} /> Monthly</div>
         </header>
         <main>
-            {plans.map((plan,i)=>(<div key={"plan"+i} className={plan.active ? "plan active": "plan"}>
+            {plans.map((plan,index)=>(<div key={"plan"+index} className={plan.active ? "plan active": "plan"}>
                 <h3 className="type">{plan.type}</h3>
                 <span className="price">{annually ? plan.AnnualPrice : plan.monthPrice}</span>
                 <ul className="proprties">
-                    {plan.properties.map((prop,j)=>(<li className="prop" key={"prop"+j}>
+                    {plan.properties.map((prop,index2)=>(<li className="prop" key={"prop"+index2}>
                     {prop}
                     </li>))}
                 </ul>
